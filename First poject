@@ -1,0 +1,18 @@
+def mylist(l):
+    if type(l) is list:
+        if len(l) >= 1:
+            return(mylist(l[0])+ mylist(l[1:]))
+        else:
+            return([])   
+    else:
+        return[l]
+        
+ #this is first question.
+ 
+ 
+ def mylist2(k):
+    if isinstance(k, list):
+        return [recursive_reversed(i) for i in reversed(k)]
+    return k
+    
+#this is secoond question.
