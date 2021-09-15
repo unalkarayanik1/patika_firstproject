@@ -1,7 +1,0 @@
-"""this is my first task"""
-
-def mylist(l): return mylist(l[0]) + (mylist(l[1:]) if len(l) > 1 else []) if type(l) is list else [l]
-
-
-
-"""this is my second task""""
