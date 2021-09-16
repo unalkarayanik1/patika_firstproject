@@ -1,0 +1,7 @@
+select rating, count (*) from film group by rating;
+
+select * from (select replacement_cost, count(*) as total from film group by replacement_cost) as a where total > 50 order by total;
+
+select store_id, count(*) from customer group by store_id;
+
+select country_id,count(*) from city group by country_id order by count desc limit 1
