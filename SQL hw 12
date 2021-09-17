@@ -1,0 +1,10 @@
+select count(length) from film where length > (select avg(length) from film)
+
+select count(rental_rate) from film where rental_rate = (select max(rental_rate) from film)
+
+select title from film where rental_rate = (select min(rental_rate) from film) order by title
+
+select title from film where replacement_Cost = (select min(replacement_cost) from film) order by title
+
+select a.customer_id, total, first_name from (select customer_id,count(*) as total from payment p group by customer_id order by total)  as a 
+left join customer c on c.customer_id=a.customer_id order by total desc;
